@@ -12,9 +12,9 @@ ___
 Welcome to the Cube Simulator starter guide.
 
 This is a short guide where I will be explaining how I made this simulator and the methodology behind it as well some technical things , it is recommended before you start that you have basic to average understanding of Unity and at least average experience in scripting/programming using C# , you should note that this guide will not discuss the source code from scratch but will only highlight major points where a developer will need to know in order to understand the flow of the simulator.
-
+___
 ####Table of Contents :
-
+___
 **I.    Cube Construction**
 
 **II. 	2D Cube Logic**
@@ -28,7 +28,8 @@ This is a short guide where I will be explaining how I made this simulator and t
 **VI. 	Trail Rendering**
 
 **VII. 	Inputs**
-
+___
+___
 ___
 **I. Cube Construction**
 
