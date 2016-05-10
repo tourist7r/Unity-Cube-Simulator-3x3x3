@@ -1,12 +1,18 @@
 # Unity Cube Simulator 3x3x3
 
+#### Download Project
+To download the whole project you can get it from the following link:
+
+[Unity Rubik's Cube Simulator 3x3x3 - Unity 5 Edition](https://www.mediafire.com/?2e2gzmmo9nd2sp4)
+
+#### Guide
 Welcome to the Cube Simulator starter guide.
 
 This is a short guide where I will be explaining how I made this simulator and the methodology behind it as well some technical things , it is recommended before you start that you have basic to average understanding of Unity and at least average experience in scripting/programming using C# , you should note that this guide will not discuss the source code from scratch but will only highlight major points where a developer will need to know in order to understand the flow of the simulator.
 
 Table of Contents :
 
-**I. Cube Construction**
+**I.    Cube Construction**
 
 **II. 	2D Cube Logic**
 
@@ -14,7 +20,7 @@ Table of Contents :
 
 **IV. 	Cube Scrambling Algorithm**
 
-**V.      Cube Solving Algorithm**
+**V.    Cube Solving Algorithm**
 
 **VI. 	Trail Rendering**
 
