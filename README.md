@@ -72,7 +72,7 @@ public string[,] getRedFace(){
                 arr[i,j] = cube1[i,j];    
         return arr;
     }
-    ```
+```
 
 
 
@@ -93,7 +93,7 @@ This is the primary class that controls our 3D cube , it uses the 2D cube class 
 The main idea here is to use the tags and then match the cubies to their to be rotated parent , as cubies cannot have more than one parent , it is understood that if we place cubies as children to some parent and then rotate that parent then the rest of the cubies will rotate with it , knowing this fact we can proceed and create controls to manage cubies parenting.
 
 Cube face rotation
-You can take a look at the ```rotation()``` function , inside it we do the whole cube rotation operation as well face rotation , for face rotation we first get the selected face to be rotated via the button or keyboard input , then we use it as a map to our 2D cube's face where it will return to us the previously mentioned method of returning an array of tags for that specific face.
+You can take a look at the ``` rotation() ``` function , inside it we do the whole cube rotation operation as well face rotation , for face rotation we first get the selected face to be rotated via the button or keyboard input , then we use it as a map to our 2D cube's face where it will return to us the previously mentioned method of returning an array of tags for that specific face.
 
 We then proceed to change the parent of the tagged cubies to the selected face , next we rotate the 2D cube (we also rotate it an additional two times if reverse was selected, a little hack but has no visual effect , what comes around goes around :D ).
 
@@ -128,7 +128,7 @@ else if(!rotate && button.Equals("scramble")){
           }
           scrambleReverseList.Add(reverse); //store current reverse status for later reset
      }
-     ```
+```
 
 In our update mehod we detect the scramble flag and proceed to flush the next scrambles until over , during this time the player cannot control the cube until it is reset or done scrambling , trails can still be toggled however and rotation speed tweaked along other options.
 
@@ -149,7 +149,7 @@ In order to make face rotation a little bit more eye pleasing , a visual effect 
 
 VII. Inputs
 
-Below are the inputs mapped under ```Controls()``` method along button inputs with descriptions:
+Below are the inputs mapped under ``` Controls() ``` method along button inputs with descriptions:
 
 Keyboard Keys/Cube Control UI Buttons (The buttons are colored in respect to the center pieces color of each face)
 
