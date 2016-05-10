@@ -158,9 +158,9 @@ Below are the inputs mapped under ``` Controls() ``` method along button inputs 
 
 **Keyboard Keys/Cube Control UI Buttons** (The buttons are colored in respect to the center pieces color of each face)
 
--U / Up			 -> Rotate the white face.
--D / Down		 -> Rotate the yellow face.
--R / Right	 	 -> Rotate the blue face.
+- U / Up			 -> Rotate the white face.
+- D / Down		 -> Rotate the yellow face.
+- R / Right	 	 -> Rotate the blue face.
 -L / Left 		 -> Rotate the green face.
 -F / Front		 -> Rotate the red face
 -B / Back	 	 -> Rotate the orange face.
