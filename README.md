@@ -6,22 +6,20 @@ This is a short guide where I will be explaining how I made this simulator and t
 
 Table of Contents :
 
-Topic
-Page
-I. 	Cube Construction
-3
-II. 	2D Cube Logic
-3
-III. 	3D Cube Logic
-4
-IV. 	Cube Scrambling Algorithm
-5
-V.         Cube Solving Algorithm
-5
-VI. 	Trail Rendering
-6
-VII. 	Inputs
-6
+** I. 	    Cube Construction
+
+** II. 	2D Cube Logic
+
+** III. 	3D Cube Logic
+
+** IV. 	Cube Scrambling Algorithm
+
+** V.      Cube Solving Algorithm
+
+** VI. 	Trail Rendering
+
+** VII. 	Inputs
+
 
 
 I. Cube Construction
