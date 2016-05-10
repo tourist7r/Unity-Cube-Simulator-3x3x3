@@ -1,10 +1,13 @@
 # Unity Cube Simulator 3x3x3
 
+![alt text](http://i.imgur.com/nlIc6H1.png "Game Scene")
+
+___
 #### Download Project
 To download the whole project you can get it from the following link:
 
 [Unity Rubik's Cube Simulator 3x3x3 - Unity 5 Edition](https://www.mediafire.com/?2e2gzmmo9nd2sp4)
-
+___
 #### Guide
 Welcome to the Cube Simulator starter guide.
 
