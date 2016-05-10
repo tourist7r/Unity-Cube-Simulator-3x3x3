@@ -22,14 +22,14 @@ Table of Contents :
 
 
 
-I. Cube Construction
+**I. Cube Construction**
 
 Creating the cube is a very simple and straight forward process, you only need to use cubes, 26 of them and place them just like how the rubik cube looks , then you will need tiles which can be again formed from cubes themselves , these tiles are used in order to represent the cell color. You essentially need 3 tiles for each corner piece , 2 tiles for each edge piece , 1 tile for each center piece , you need to make sure you map and parent them correctly to their respective cubes, you may see the hierarchy in the project at Game scene or prefab for a better understanding. Materials are finally used to paint the cube , simple drag and drop operation , no biggy. :)
 
 After creating all your pieces , remember to give each of them a tag. Ie (Center Piece 1 , Corner Piece 4...etc) , you also need to parent all the cubies under one parent which is Rubik_cube or whatever name you like , that is where you will throw in the CubeController script.
 
 
-II. 2D Cube logic (Cube2D.cs)
+**II. 2D Cube logic (Cube2D.cs)**
 
 Now you might be asking , why do we need this? Isn't it easier to just use colliders and triggers to detect cubies on some face and then parent them to that face and rotate the face?
 
@@ -76,7 +76,7 @@ public string[,] getRedFace(){
 
 
 
-III. 3D Cube logic (CubeController.cs)
+**III. 3D Cube logic (CubeController.cs)**
 
 This is the primary class that controls our 3D cube , it uses the 2D cube class to logically and correctly select the correct pieces to be rotated. Here's a list of features it includes:
 
@@ -90,14 +90,14 @@ This is the primary class that controls our 3D cube , it uses the 2D cube class 
 
 The main idea here is to use the tags and then match the cubies to their to be rotated parent , as cubies cannot have more than one parent , it is understood that if we place cubies as children to some parent and then rotate that parent then the rest of the cubies will rotate with it , knowing this fact we can proceed and create controls to manage cubies parenting.
 
-Cube face rotation
+**Cube face rotation**
 You can take a look at the ``` rotation() ``` function , inside it we do the whole cube rotation operation as well face rotation , for face rotation we first get the selected face to be rotated via the button or keyboard input , then we use it as a map to our 2D cube's face where it will return to us the previously mentioned method of returning an array of tags for that specific face.
 
 We then proceed to change the parent of the tagged cubies to the selected face , next we rotate the 2D cube (we also rotate it an additional two times if reverse was selected, a little hack but has no visual effect , what comes around goes around :D ).
 
 Finally we select the rotation speed from the drop down list combo box and flag start the rotation as well  play the sfx sound of rotation , when that happens , the center piece of the selected face will rotate 90 degrees in factors of 90 speed until the count expires (I'm using factors of 90 to represent the rotation speed as floating point numbers due their nature are prune to precision and marginal errors that can accumulate and cause rotation precision bugs which can make the cube glitchy), then the rotation is complete and variables as well parents are reset for the next rotation.
 
-Whole cube rotation
+**Whole cube rotation**
 We simply parent the whole cube pieces to one parent which is Cube , it is where we also attach the script , with this we can control the cube as a whole and at the rotation part we can use the mouse right click drag as an input to rotate the whole cube so other faces are revealed , a code snippet as follows:
 
 ```
@@ -111,7 +111,7 @@ if (Input.GetMouseButton (1)) {
 ```
 
 
-IV. Cube Scrambling Algorithm
+**IV. Cube Scrambling Algorithm**
 
 This is a simple aglorithm that populates an arraylist with random faces to be rotated in random directions , currently it rotates 30 random faces, here's a code snippet:
 
@@ -130,7 +130,7 @@ else if(!rotate && button.Equals("scramble")){
 
 In our update mehod we detect the scramble flag and proceed to flush the next scrambles until over , during this time the player cannot control the cube until it is reset or done scrambling , trails can still be toggled however and rotation speed tweaked along other options.
 
-V. Cube Solving Algorithm
+**V. Cube Solving Algorithm**
 
 In order to make an AI that solves the cube , there needs to be some data structures to map the cubies and the tiles , this is demonstrated in the Cube2D script , it is where as well the AI solver takes place , the written script simulates real cube cases with pre-written algorithms to tackle each case , for instance by taking a scrambled cube, the following phases are solved on after another (Magic cube style):
 
@@ -140,16 +140,17 @@ In order to make an AI that solves the cube , there needs to be some data struct
 - The Yellow Cross.
 - Orientation of the Last Layer (OLL).
 - Permutation of the Last Layer (PLL).
-IV. Trail Rendering
+
+**IV. Trail Rendering**
 
 In order to make face rotation a little bit more eye pleasing , a visual effect is added which is simply adding a trail renderer to each corner piece , this can be customized to your own preference or simply disabled using the UI.
 
 
-VII. Inputs
+**VII. Inputs**
 
 Below are the inputs mapped under ``` Controls() ``` method along button inputs with descriptions:
 
-Keyboard Keys/Cube Control UI Buttons (The buttons are colored in respect to the center pieces color of each face)
+**Keyboard Keys/Cube Control UI Buttons** (The buttons are colored in respect to the center pieces color of each face)
 
 U / Up			 -> Rotate the white face.
 D / Down		 -> Rotate the yellow face.
@@ -160,7 +161,7 @@ B / Back	 	 -> Rotate the orange face.
 S / Solve		 -> Solves the cube.
 Left CTRL / Reverse	 -> Changes face rotation from clockwise to anti-clockwise and vice versa.
 
-UI Buttons
+**UI Buttons**
 
 Scramble 		 -> Rotates 30 randomly selected faces clockwise or anti-clockwise.
 Reset 			 -> Resets the cube.
@@ -172,7 +173,7 @@ Trails			 -> Enable/Disable Trail Renderer.
 BGM			 -> Enable/Disable BGM.
 SFX 			 -> Enable/Disable SFX.
 
-Others
+**Others**
 
 Speed 			 -> Dropdown list with rotation speeds using factors of 90.
 Timer			 -> Press space bar to start the timer count from 0 , press again to stop counting.
