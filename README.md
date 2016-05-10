@@ -40,7 +40,9 @@ This is also correct and can be done , however the main reason we need a 2D Cube
 There are different approaches that can be used to simulate a 2D cube , one of the easiest approaches is to represent the cube in 2D manner having three 3x3 arrays to represent the cubes , as we're using unity it will be easier to simply use tags and in this case we can fill the array with just the tag names respectively.
 
 Next  in the code we simulate the 2D cube rotations via swapping , here's a snippet to rotate the red face:
-=========================================
+
+
+```
 if (face == 3) { //red
     //rotate corners
     string temp = cube1[0, 0];
@@ -56,11 +58,13 @@ if (face == 3) { //red
     cube1[2, 1] = cube1[1, 2];
     cube1[1, 2] = temp;
 }
-=========================================
+```
+
 
 
 Another thing that is needed which is to give out the selected face tags to the Cube Controller class that will use this information to map cubies to the selected to be rotated face, here's a snippet :
-=========================================
+
+```
 public string[,] getRedFace(){
         string[,] arr = new string[3,3];
         for(int i = 0;i < 3;i++)
@@ -68,7 +72,8 @@ public string[,] getRedFace(){
                 arr[i,j] = cube1[i,j];    
         return arr;
     }
-========================================= 
+    ```
+
 
 
 
@@ -88,7 +93,7 @@ This is the primary class that controls our 3D cube , it uses the 2D cube class 
 The main idea here is to use the tags and then match the cubies to their to be rotated parent , as cubies cannot have more than one parent , it is understood that if we place cubies as children to some parent and then rotate that parent then the rest of the cubies will rotate with it , knowing this fact we can proceed and create controls to manage cubies parenting.
 
 Cube face rotation
-You can take a look at the rotation() function , inside it we do the whole cube rotation operation as well face rotation , for face rotation we first get the selected face to be rotated via the button or keyboard input , then we use it as a map to our 2D cube's face where it will return to us the previously mentioned method of returning an array of tags for that specific face.
+You can take a look at the ```rotation()``` function , inside it we do the whole cube rotation operation as well face rotation , for face rotation we first get the selected face to be rotated via the button or keyboard input , then we use it as a map to our 2D cube's face where it will return to us the previously mentioned method of returning an array of tags for that specific face.
 
 We then proceed to change the parent of the tagged cubies to the selected face , next we rotate the 2D cube (we also rotate it an additional two times if reverse was selected, a little hack but has no visual effect , what comes around goes around :D ).
 
@@ -96,7 +101,8 @@ Finally we select the rotation speed from the drop down list combo box and flag 
 
 Whole cube rotation
 We simply parent the whole cube pieces to one parent which is Cube , it is where we also attach the script , with this we can control the cube as a whole and at the rotation part we can use the mouse right click drag as an input to rotate the whole cube so other faces are revealed , a code snippet as follows:
-=========================================
+
+```
 //Mouse Drag Cube Rotation
 if (Input.GetMouseButton (1)) {
             float rotationX = Input.GetAxis ("Mouse X") * sensitivityX;
@@ -104,12 +110,14 @@ if (Input.GetMouseButton (1)) {
             transform.Rotate (cameraTm.up, -Mathf.Deg2Rad * rotationX * Time.deltaTime *     5000,Space.World);
             transform.Rotate (cameraTm.right, Mathf.Deg2Rad * rotationY * Time.deltaTime * 5000,Space.World);
 }
-=========================================
+```
+
 
 IV. Cube Scrambling Algorithm
 
 This is a simple aglorithm that populates an arraylist with random faces to be rotated in random directions , currently it rotates 30 random faces, here's a code snippet:
-=========================================
+
+```
 else if(!rotate && button.Equals("scramble")){
           //trigger scramble mode
           scramble = true;
@@ -120,7 +128,8 @@ else if(!rotate && button.Equals("scramble")){
           }
           scrambleReverseList.Add(reverse); //store current reverse status for later reset
      }
-=========================================
+     ```
+
 In our update mehod we detect the scramble flag and proceed to flush the next scrambles until over , during this time the player cannot control the cube until it is reset or done scrambling , trails can still be toggled however and rotation speed tweaked along other options.
 
 V. Cube Solving Algorithm
@@ -138,13 +147,9 @@ IV. Trail Rendering
 In order to make face rotation a little bit more eye pleasing , a visual effect is added which is simply adding a trail renderer to each corner piece , this can be customized to your own preference or simply disabled using the UI.
 
 
-
-
-
-
 VII. Inputs
-==============================================================
-Below are the inputs mapped under Controls() method along button inputs with descriptions:
+
+Below are the inputs mapped under ```Controls()``` method along button inputs with descriptions:
 
 Keyboard Keys/Cube Control UI Buttons (The buttons are colored in respect to the center pieces color of each face)
 
@@ -176,7 +181,7 @@ Timer			 -> Press space bar to start the timer count from 0 , press again to sto
 Whole Cube Rotation   -> Hold right click and drag to rotate the cube in the direction you're dragging.
 
 
-==============================================================
+
 This was all there is regarding this cube simulator, the rest such as sound and canvas as well buttons manipulation can be learned from other tutorials as this guide's objective is to focus on the rubik's cube logic implementation in Unity.
 
 If you feel this guide is missing or needs further explanation regarding something I overlooked , you may send me a message at Fahad@NoCakeNoCode.com and I will be more than happy to take a look at it and answer you back as soon as possible.
@@ -184,4 +189,3 @@ If you feel this guide is missing or needs further explanation regarding somethi
 
 
 
-=============================END==============================
