@@ -1,4 +1,4 @@
-# Cube-Simulator-3x3x3
+# Unity Cube Simulator 3x3x3
 
 Welcome to the Cube Simulator starter guide.
 
