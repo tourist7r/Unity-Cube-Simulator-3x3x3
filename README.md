@@ -161,29 +161,29 @@ Below are the inputs mapped under ``` Controls() ``` method along button inputs 
 - U / Up			 -> Rotate the white face.
 - D / Down		 -> Rotate the yellow face.
 - R / Right	 	 -> Rotate the blue face.
--L / Left 		 -> Rotate the green face.
--F / Front		 -> Rotate the red face
--B / Back	 	 -> Rotate the orange face.
--S / Solve		 -> Solves the cube.
--Left CTRL / Reverse	 -> Changes face rotation from clockwise to anti-clockwise and vice versa.
+- L / Left 		 -> Rotate the green face.
+- F / Front		 -> Rotate the red face
+- B / Back	 	 -> Rotate the orange face.
+- S / Solve		 -> Solves the cube.
+- Left CTRL / Reverse	 -> Changes face rotation from clockwise to anti-clockwise and vice versa.
 
 **UI Buttons**
 
--Scramble 		 -> Rotates 30 randomly selected faces clockwise or anti-clockwise.
--Reset 			 -> Resets the cube.
--Solve			 -> Solves the cube.
+- Scramble 		 -> Rotates 30 randomly selected faces clockwise or anti-clockwise.
+- Reset 			 -> Resets the cube.
+- Solve			 -> Solves the cube.
 
 **Toggles**
 
--Trails			 -> Enable/Disable Trail Renderer.
--BGM			 -> Enable/Disable BGM.
--SFX 			 -> Enable/Disable SFX.
+- Trails			 -> Enable/Disable Trail Renderer.
+- BGM			 -> Enable/Disable BGM.
+- SFX 			 -> Enable/Disable SFX.
 
 **Others**
 
--Speed 			 -> Dropdown list with rotation speeds using factors of 90.
--Timer			 -> Press space bar to start the timer count from 0 , press again to stop counting.
--Whole Cube Rotation   -> Hold right click and drag to rotate the cube in the direction you're dragging.
+- Speed 			 -> Dropdown list with rotation speeds using factors of 90.
+- Timer			 -> Press space bar to start the timer count from 0 , press again to stop counting.
+- Whole Cube Rotation   -> Hold right click and drag to rotate the cube in the direction you're dragging.
 
 
 
