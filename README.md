@@ -142,7 +142,7 @@ In our update mehod we detect the scramble flag and proceed to flush the next sc
 ___
 **V. Cube Solving Algorithm**
 
-In order to make an AI that solves the cube , there needs to be some data structures to map the cubies and the tiles , this is demonstrated in the Cube2D script , it is where as well the AI solver takes place , the written script simulates real cube cases with pre-written algorithms to tackle each case , for instance by taking a scrambled cube, the following phases are solved on after another (Magic cube style):
+In order to make an AI that solves the cube , there needs to be some data structures to map the cubies and the tiles , this is demonstrated in the Cube2D script , it is where as well the AI solver takes place , the written script simulates real cube cases with pre-written algorithms to tackle each case , for instance by taking a scrambled cube, the following phases are solved one after another (Magic cube style):
 
 - The White Cross.
 - The Corner pieces of the 1st layer.
