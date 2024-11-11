@@ -194,7 +194,7 @@ Below are the inputs mapped under ``` Controls() ``` method along button inputs 
 ___
 This was all there is regarding this cube simulator, the rest such as sound and canvas as well buttons manipulation can be learned from other tutorials as this guide's objective is to focus on the rubik's cube logic implementation in Unity.
 
-If you feel this guide is missing or needs further explanation regarding something I overlooked , you may send me a message at Fahad@NoCakeNoCode.com and I will be more than happy to take a look at it and answer you back as soon as possible.
+If you feel this guide is missing or needs further explanation regarding something I overlooked , you may send me a message at tourist7r@gmail.com and I will be more than happy to take a look at it and answer you back as soon as possible.
 ___
 
 
